@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax_index</title>
+                <!-- /static/js/ajax.js -->
+    <script th:src="@{/js/ajax.js}" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" th:href="@{/css/ajax_index.css}">
+</head>
+<body>
+<div class="search">
+    <div class="ajax-join">
+        이름: <input type="text" name="userName" id="userName">
+        <input type="button" value="중복체크" id="nameChecked">
+        <br>
+        비밀번호: <input type="text" name="userPw" id="userPw"> <br>
+        <input type="button" value="회원가입" id="joinOkBtn">
+    </div>
+</div>
+<div class="ajax">
+    <div class="ajax-con">
+        <button id="btn1">ajax1</button>
+        <button id="btn2">ajax2</button>
+        <button id="btn3">ajax3</button>
+        <button id="btn4">ajax4</button>
+        <button id="btn5">ajax5</button>
+        <button id="btn6">ajax6</button>
+        <button id="btn7">ajax7</button>
+        <button id="btn8">ajax8</button>
+        <button id="btn9">ajax9</button>
+        <button id="btn10">ajax10</button>
+    </div>
+</div>
+</body>
+</html>
