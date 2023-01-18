@@ -6,6 +6,8 @@ import org.spring.ajax.service.AjaxMemberService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @Controller
 @RequestMapping("/ajax")
@@ -72,5 +74,38 @@ public class AjaxController {
         int rs=ajaxMemberService.findByUserNameDo(userName);
 
         return rs;
+    }
+    // 회원조회
+
+    @GetMapping("/memberList")
+    public String memberList(){
+        return "ajax_list";
+    }
+
+    @GetMapping("/memberList2")
+    public @ResponseBody List<AjaxMemberDto> memberList2(){
+
+        List<AjaxMemberDto> memberLists=ajaxMemberService.memberListDo();
+
+        return memberLists;
+    }
+
+    @GetMapping("/detail")
+    public String detail(){
+        return "ajax_detail";
+    }
+
+    @PostMapping("/detail")
+    public @ResponseBody AjaxMemberDto detail2(@RequestParam Long id){
+
+        AjaxMemberDto ajaxMemberDto=ajaxMemberService.findByIdDo(id);
+
+        if(ajaxMemberDto!=null){
+            System.out.println("Success");
+        }else{
+            System.out.println("Fail");
+        }
+
+        return ajaxMemberDto;
     }
 }

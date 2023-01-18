@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax_detail</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script th:src="@{/js/ajax3.js}" defer></script>
+</head>
+<body>
+<div>
+  <h1>Detail</h1>
+  <button id="ajaxBtn">AjaxButton</button>
+</div>
+<div>
+    id: <input type="text" name="id" id="id">
+</div>
+<table border="1" id="detail">
+  <thead>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>pw</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  </tbody>
+</table>
+</body>
+</html>
